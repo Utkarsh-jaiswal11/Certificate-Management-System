@@ -83,7 +83,7 @@
         const button = document.querySelector(".btn-sub");
         button.addEventListener('click', () => {
             const rollNumber = document.getElementById("rollNumber").value;
-            const newUrl = `http://localhost:3000/generate-certificate/${rollNumber}`;
+            const newUrl = `http://localhost:5000/generate-certificate/${rollNumber}`;
             window.history.pushState({}, document.title, newUrl);
 
         })
