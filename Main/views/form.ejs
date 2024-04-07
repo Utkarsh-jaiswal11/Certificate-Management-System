@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            background-image: url("/images/ngo-bg.avif");
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+
+        }
+
+        .container {
+            width: 360px;
+            height: 275px;
+           
+            background-image: url(/images/bg-ngo.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 10rem;
+            left: 33rem;
+            border-radius: 15px;
+            padding: 23px;
+            background-color: rgba(53, 199, 240, 0.44);
+            
+        }
+
+        .text1 {
+            font-size: 21px;
+            position: relative;
+            top: 28px
+        }
+
+        #rollNumber {
+            width: 100%;
+            height: 40px;
+            border: none;
+            background-color: #f5deb326;
+            position: relative;
+            top: 3rem;
+            right: 8px;
+            font-size: 20px;
+            padding-left: 10px;
+            border-radius: 15px;
+        }
+        #rollNumber:hover{
+            border: 2px solid black;
+        }
+
+        .btn-sub {
+            position: relative;
+            top: 6rem;
+            width: 100%;
+            height: 45px;
+            font-size: 16px;
+            background-color: aquamarine;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .btn-sub:hover {
+            background-color: rgb(47, 244, 178);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="myForm">
+            <label for="rollNumber" class="text1">Enter Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" required>
+            <button class="btn-sub" type="submit">Generate Certificate</button>
+        </form>
+    </div>
+    <script>
+        const button = document.querySelector(".btn-sub");
+        button.addEventListener('click', () => {
+            const rollNumber = document.getElementById("rollNumber").value;
+            const newUrl = `http://localhost:3000/generate-certificate/${rollNumber}`;
+            window.history.pushState({}, document.title, newUrl);
+
+        })
+    </script>
+</body>
+
+</html>

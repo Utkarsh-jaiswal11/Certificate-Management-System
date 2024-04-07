@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    h1 , h3{
+        display: flex;
+        justify-content: center;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 42rem;
+    }
+</style>
+<body>
+    <h1>Hey! Welcome to my page</h1>
+    <h3>
+        Here you can genrate your completion certificate!
+
+    </h3>
+    <button class="btn">Click here to Proceed</button>
+    <script>
+        const button = document.querySelector(".btn");
+        button.addEventListener("click", () => {
+            window.location.href = `http://localhost:3000/generate-certificate`
+        })
+    </script>
+</body>
+</html>
