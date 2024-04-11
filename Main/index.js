@@ -12,7 +12,7 @@ app.use(express.static('public'));
 app.set( 'view engine', 'ejs' );
 
 
-const uri = 'mongodb://localhost:27017/Student_details'; // connection string /
+const uri = 'mongodb+srv://Utkarsh-Jaiswal:BFXMy014AzzIfvHX@student-details.zne3zjl.mongodb.net/Students'; // connection string /
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
