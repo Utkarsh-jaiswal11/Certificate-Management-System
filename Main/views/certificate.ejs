@@ -1,123 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<style>
-    
-  
-.every{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        body {
+            /* font-family: Arial, sans-serif; */
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
 
-.inner-border{
-    width: 70rem;
-    height: 40rem;
-    background-color: #13c2c240;
-    position: relative;
-    left: 12rem 
-}
-.outer{
-    width: 68rem;
-    height: 37.6rem;
-    /* background-color: white; */
-    position: relative;
-    left: 1rem;
-    /* padding: 10px; */
-    top: 18px;
-    background-image: url('/images/bg-certificate.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.certificate{
-    font-size: 68px;
-    position: relative;
-    top: 50px;
-    color: rgb(4 28 89);
+        .inner-border {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
 
-}
-.completion{
-    
-    font-size: 28px;
-    position: relative;
-    top: 50px;
-    color: rgb(4 28 89);
-    
-}
-.line1{
-    position: relative;
-    top: 3.7rem;
-    font-size: 23px;
-    color: rgb(4 28 89);
+        .outer {
+            width: 100%;
+            max-width: 68rem;
+            /* Adjust max-width according to your preference */
+            height: auto;
+            position: relative;
+            background-color: #13c2c240;
+            background-image: url('/images/bg-certificate.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-}
-.name{
-    position: relative;
-    top: 5rem;
-    text-decoration: underline;
-    font-size: 30px;
-    color: rgb(3 29 94);
-}
-.line2{
-    position: relative;
-    top: 5.8rem;
-    font-size: 25px;
-    color: rgb(4 28 89);
-}
-.course{
-    position: relative;
-    top: 6.5rem;
-    font-size: 30px;color: rgb(4 28 89);
-}
-.line3{
-    position: relative;
-    top: 7.7rem;
-    font-size: 25px;color: rgb(4 28 89);
-}
-.credentials{
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    top: 11rem;
-    width: 66rem;
-}
-.sign1{
-    position: relative;
-    top: 10px;
-}
-img{
-    width: 95px;
-    border-radius: 50%;
-}
-.enrollment{
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
-}
-</style>
+        .certificate,
+        .completion,
+        .line1,
+        .name,
+        .line2,
+        .course,
+        .line3,
+        .credentials {
+            text-align: center;
+            color: rgb(4, 28, 89);
+        }
+
+        .certificate {
+            font-size: 5vw;
+            /* Responsive font size */
+            margin-top: 2vh;
+            /* Responsive margin */
+        }
+
+        .completion {
+            font-size: 2vw;
+            /* Responsive font size */
+            margin-top: 2vh;
+            /* Responsive margin */
+        }
+
+        .line1,
+        .line2,
+        .line3 {
+            font-size: 1.5vw;
+            /* Responsive font size */
+            margin-top: 2vh;
+            /* Responsive margin */
+        }
+
+        .name,
+        .course {
+            font-size: 2vw;
+            /* Responsive font size */
+            margin-top: 2vh;
+            /* Responsive margin */
+        }
+
+        .credentials {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5vh;
+            /* Responsive margin */
+        }
+
+        .sign1,
+        .sign2 {
+            margin-top: 2vh;
+            /* Responsive margin */
+        }
+
+        img {
+            width: 7vw;
+            /* Responsive image width */
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
 </head>
+
 <body>
     <div class="inner-border">
         <div class="outer">
-            <div class="enrollment">EnrollmentNo.#<%= studentRoll %></div>
-            <div class="certificate every satisfy-regular">
-                CERTIFICATE
+            <div class="enrollment">Enrollment No. #<%= studentRoll %>
             </div>
-            <div class="completion every">OF COMPLETION</div>
-            <div class="line1 every">This is to certify that</div>
-            <div class="name every"><%= studentName %></div>
-            <div class="line2 every">has successfully completed the course of</div>
-            <div class="course every"><%= courseName %></div>
-            <div class="line3 every">awarded on this 10th day of March in the year 2024</div>
+            <div class="certificate">CERTIFICATE</div>
+            <div class="completion">OF COMPLETION</div>
+            <div class="line1">This is to certify that</div>
+            <div class="name">
+                <%= studentName %>
+            </div>
+            <div class="line2">has successfully completed the course of</div>
+            <div class="course">
+                <%= courseName %>
+            </div>
+            <div class="line3">awarded on this 10th day of March in the year 2024</div>
 
-            <div class="credentials ">
+            <div class="credentials">
                 <div class="sign1">
                     <p>Director</p>
                     <p>NGO Name</p>
@@ -125,7 +125,7 @@ img{
                 <div class="logo">
                     <img src='/images/growthscooter_logo.jpeg' alt="">
                 </div>
-                <div class="sign1">
+                <div class="sign2">
                     <p>Trainer</p>
                     <p>NGO Name</p>
                 </div>
@@ -133,4 +133,5 @@ img{
         </div>
     </div>
 </body>
+
 </html>
