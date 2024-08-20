@@ -1,4 +1,4 @@
-# Certificate-Mangement-System
+# Certificate-Management-System
 The system allows users to input their roll number and receive a downloadable certificate in PDF format. The certificate template dynamically populates fields such as name, father's name, etc., based on the provided roll number.
 # Objective
 The objective of this project is to develop a standalone web page to manage certificate courses offered byJaidevi Rajaram Charity(https://www.jaidevirajaramcharity.org/). The system should streamline the process of issuing certificates and ensure a seamless user experience.
