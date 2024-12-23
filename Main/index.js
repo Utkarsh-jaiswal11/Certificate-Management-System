@@ -13,10 +13,7 @@ app.set( 'view engine', 'ejs' );
 
 
 const uri = 'mongodb+srv://Utkarsh-Jaiswal:BFXMy014AzzIfvHX@student-details.zne3zjl.mongodb.net/Students'; // connection string /
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(uri);
 // Define a schema for student data
 const studentSchema = new mongoose.Schema({
   name: String,
